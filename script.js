@@ -186,3 +186,28 @@ tabsContainer.addEventListener('click', e => {
   // // Add new active content
   // tabsContent[active - 1].classList.add('operations__content--active');
 });
+
+///////////////////////////////////////
+// Reveal Sections
+
+const sections = document.querySelectorAll('section');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+sections.forEach(section => {
+  section.classList.add('section--hidden');
+  sectionObserver.observe(section);
+});
