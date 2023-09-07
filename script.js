@@ -122,12 +122,30 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 ///////////////////////////////////////
 // Sticky Nav
-const s1IntitalCoords = section1.getBoundingClientRect();
+// const s1IntitalCoords = section1.getBoundingClientRect();
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY >= s1IntitalCoords.y) nav.classList.add('sticky');
+// window.addEventListener('scroll', () => {
+//   if (window.scrollY >= s1IntitalCoords.y) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
+
+const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
+
+const obsCallback = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
-});
+};
+
+const obsOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+};
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+observer.observe(header);
 
 ///////////////////////////////////////
 // Tabbed Component
