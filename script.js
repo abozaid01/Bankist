@@ -1,6 +1,15 @@
 'use strict';
 
 ///////////////////////////////////////
+// Responsive Mobile Navigation
+const header = document.querySelector('.header');
+const navBtn = document.querySelector('.btn-mobile-nav');
+
+navBtn.addEventListener('click', () => {
+  header.classList.toggle('nav-open');
+});
+
+///////////////////////////////////////
 // Modal window
 
 const modal = document.querySelector('.modal');
@@ -11,6 +20,7 @@ const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const openModal = function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
+  header.classList.remove('nav-open');
 };
 
 const closeModal = function () {
@@ -91,10 +101,13 @@ document.querySelector('.nav__links').addEventListener('click', e => {
   if (
     e.target.classList.contains('nav__link') &&
     e.target.getAttribute('href') !== '#'
-  )
+  ) {
     document
       .querySelector(e.target.getAttribute('href'))
       .scrollIntoView({ behavior: 'smooth' });
+
+    header.classList.toggle('nav-open');
+  }
 });
 
 ///////////////////////////////////////
@@ -129,7 +142,7 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 //   else nav.classList.remove('sticky');
 // });
 
-const header = document.querySelector('.header');
+//const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 
 const obsCallback = function (entries, observer) {

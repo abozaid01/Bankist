@@ -1,0 +1,197 @@
+@media (max-width: 1000px) {
+  .features__img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 940px) {
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .nav-open .nav__links {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .nav__links {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    transform: translateX(
+      100%
+    ); /* use translate of right instead, because of transition*/
+
+    /* Steps to hide navigation: */
+
+    /* 1) Hide it visually */
+    /* display: none; */ /* No Transition ): */ /* if you choose this, then no need to the following steps */
+    opacity: 0;
+  }
+
+  .header {
+    height: 120vh;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    line-height: 1.3;
+  }
+
+  .header__title {
+    grid-template-columns: 12fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1.2rem;
+  }
+  .header__img {
+    width: 60%;
+    margin-top: 2.4rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 4.8rem 0;
+  }
+
+  .btn--scroll-to {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    margin-top: -4.8rem;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 12fr;
+    gap: 3rem;
+    margin: 0 12rem;
+  }
+
+  .features__feature:nth-child(3) {
+    grid-row: 4;
+  }
+
+  .features__img {
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .features__icon {
+    text-align: center;
+  }
+}
+
+@media (max-width: 780px) {
+  .testimonial__author {
+    margin-bottom: 20px;
+  }
+
+  .slider__btn {
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+
+  .nav {
+    padding: 0 2rem;
+  }
+
+  .testimonial__author {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  #section--2 {
+    padding: 12rem 1.8rem;
+  }
+
+  .footer__nav {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .nav {
+    padding: 0 1.4rem;
+  }
+
+  .features {
+    margin: 0;
+  }
+
+  .features__img {
+    width: 100%;
+  }
+
+  .features__feature {
+    width: 100%;
+  }
+
+  .operations .btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.8rem;
+  }
+
+  .operations__content {
+    column-gap: 1.8rem;
+    padding: 1.5rem 3rem 2.5rem 3rem;
+  }
+
+  .section__header {
+    font-size: 3rem;
+  }
+
+  .testimonial::before {
+    left: -8rem;
+    top: -2rem;
+    font-size: 16rem;
+  }
+
+  .testimonial__author {
+    margin-bottom: 50px;
+  }
+
+  .slider__btn {
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 2.2rem;
+  }
+
+  .dots {
+    bottom: 0;
+  }
+}
