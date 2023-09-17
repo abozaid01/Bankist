@@ -12,8 +12,8 @@ A simple Landing Page that simulates a Bank website. Built using Vanilla JavaScr
 - Smooth Scrolling.
 - Modal window.
 - Slider and Tabbed Operation Component.
-- Animation while Revealing Sections.
-- Lazy Loading images.
+- Fully Responsive on all devices.
+- Lazy Loading images while Revealing Sections.
 
 ## Getting Started
 

@@ -120,6 +120,10 @@
     font-size: 50%;
   }
 
+  .header {
+    height: 100vh;
+  }
+
   .nav {
     padding: 0 2rem;
   }
@@ -136,7 +140,7 @@
 
   .footer__nav {
     display: grid;
-    grid-template-columns: 6fr 6fr;
+    grid-template-columns: 4fr 4fr 4fr;
   }
 }
 
@@ -181,10 +185,6 @@
     font-size: 16rem;
   }
 
-  .testimonial__author {
-    margin-bottom: 50px;
-  }
-
   .slider__btn {
     width: 3.6rem;
     height: 3.6rem;
@@ -193,5 +193,11 @@
 
   .dots {
     bottom: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  html {
+    font-size: 40%;
   }
 }
