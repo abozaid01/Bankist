@@ -200,4 +200,9 @@
   html {
     font-size: 40%;
   }
+
+  .testimonial::before {
+    left: -7.5rem;
+    font-size: 15rem;
+  }
 }
